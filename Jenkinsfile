@@ -18,6 +18,11 @@ pipeline {
                 sh "docker push piyush6042/web_app:${BUILD_NUMBER}" 
             }
         }
+                 stage('Deploy container') { 
+            steps {
+                sh "docker run -itd -p 8081:8080 piyush6042/web_app:${BUILD_NUMBER}" 
+            }
+        }
 
      }
     }
