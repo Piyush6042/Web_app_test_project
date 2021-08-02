@@ -1,5 +1,6 @@
 pipeline {
     agent any 
+     stages {
         stage('Docker build image') { 
             steps {
                 sh "docker build -t piyush6042/web_app:"$(BUILD_NUMBER)" ." 
@@ -17,6 +18,6 @@ pipeline {
             }
         }
 
-
+     }
     }
 
