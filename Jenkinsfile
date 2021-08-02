@@ -9,7 +9,7 @@ pipeline {
         stage('Docker hub login') { 
             steps {
                 withCredentials([string(credentialsId: 'dockerhub13', variable: 'dockerpass')])
-                sh "docker login -u piyush6042 -p ${dockerpwd}" 
+                sh "docker login -u piyush6042 -p ${dockerpass}" 
             }
         }
         stage('Push image to Docker hub') { 
