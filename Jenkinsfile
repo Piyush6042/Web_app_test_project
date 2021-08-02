@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Push image to Docker hub') { 
             steps {
-                sh "docker push piyush6042/web_app:$(BUILD_NUMBER)" 
+                sh "docker push piyush6042/web_app:"$(BUILD_NUMBER)"" 
             }
         }
 
