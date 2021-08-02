@@ -3,7 +3,7 @@ pipeline {
      stages {
         stage('Docker build image') { 
             steps {
-                sh "docker build -t piyush6042/web_app:${BUILD_NUMBER} -v ~/var/www/html ." 
+                sh "docker build -t piyush6042/web_app:${BUILD_NUMBER} --mount type=bind,source="/var/www/html"/target,target=/app ." 
             }
         }
         stage('Docker hub login') { 
