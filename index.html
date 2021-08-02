@@ -1,0 +1,93 @@
+<html>    
+    <head>    
+        <title>Registration Form</title>    
+    </head>    
+    <body>    
+        <link href = "registration.css" type = "text/css" rel = "stylesheet" />    
+        <h2> Form Sign Up</h2>    
+        <form name = "form1" action="modified.php" method = "post" enctype = "multipart/form-data" >    
+            <div class = "container">    
+                <div class = "form_group">    
+                    <label>First Name:</label>    
+                    <input type = "text" name = "fname" value = "" required/>    
+                </div>    
+                <div class = "form_group">    
+                    <label>Middle Name:</label>    
+                    <input type = "text" name = "mname" value = "" required />    
+                </div>    
+                <div class = "form_group">    
+                    <label>Last Name:</label>    
+                    <input type = "text" name = "lname" value = "" required/>    
+                </div>    
+                <div class = "form_group">    
+                    <label>Password:</label>    
+                    <input type = "password" name = "pwd" value = "" required/>    
+                </div>    
+                <div class = "form_group">    
+                    <label>Confirm Password:</label>    
+                    <input type = "password" name = "cpwd" value = "" required/>    
+                </div>
+                <div class = "form_group">    
+                    <label>Email:</label>    
+                    <input type = "text" name = "email" value = "" required/>    
+                </div>
+                <div class = "form_group">    
+                    <label>Contact:</label>    
+                    <input type = "number" name = "contact" value = "" required/>    
+                </div>
+                <div class = "form_group">    
+                    <label>Gender:</label>    
+                  <input type = "radio" name = "gender" value = "female">Female
+                  <input type = "radio" name = "gender" value = "male">Male
+                  <input type = "radio" name = "gender" value = "others">Others  
+                </div>
+                <div class = "form_group">    
+                    <label>Address:</label>    
+                    <input type = "text" name = "address" value = "" required/>    
+                </div>
+                <div class = "form_group">    
+                    <label>Pincode:</label>    
+                    <input type = "number" name = "pin" value = "" required/>    
+                </div>
+                <div class = "form_group">    
+                    <label>City:</label>    
+                    <select id="city" name="city">
+                   <option value="India">Choose city</option>
+                   <option value="Noida">Noida</option>
+                   <option value="Delhi">Delhi</option>
+                    <option value="Gurugram">Gurugram</option>
+                      <option value="Ghaziabad">Ghaziabad</option>
+                      </select>    
+                </div>
+                <div class = "form_group">    
+                    <label>Country:</label>    
+                    <select id="country" name="country">
+                   <option value="India">Choose country</option>
+                   <option value="India">India</option>
+                   <option value="UK">UK</option>
+                    <option value="US">US</option>
+                      <option value="Canada">Canada</option>
+                      </select>   
+                </div>
+                <div class = "form_group">    
+                    <label>Skills:</label>    
+                  <input type = "radio" name = "skills" value = "PHP">PHP
+                  <input type = "radio" name = "skills" value = "Java">Java
+                  <input type = "radio" name = "skills" value = ".NET">.NET  
+                </div>
+                <div class = "form_group">    
+                    <label></label>    
+                    <input type = "file" name = "filetoUpload" value = "Upload File"/>    
+                </div>
+                <div class = "form_group">    
+                    <label></label>    
+                    <input type = "radio" name = "instruction" value = "I have read terms and conditions"/> I have read terms and conditions   
+                </div>
+                <div class = "form_group">    
+                    <label></label>    
+                    <input type = "submit" name = "Submit" value = "Submit"/> 
+                </div>
+            </div>    
+        </form>    
+    </body>    
+</html>  
