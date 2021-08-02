@@ -3,7 +3,7 @@ pipeline {
      stages {
         stage('Docker build image') { 
             steps {
-                sh "docker build -t piyush6042/web_app:${BUILD_NUMBER} --mount type=bind,source="/var/www/html"/target,target=/app ." 
+                sh "docker build -t piyush6042/web_app:${BUILD_NUMBER} ." 
             }
         }
         stage('Docker hub login') { 
@@ -20,7 +20,7 @@ pipeline {
         }
                  stage('Deploy container') { 
             steps {
-                sh "docker run -itd -p 8081:8080 piyush6042/web_app:${BUILD_NUMBER}" 
+                sh "docker run -itd -p 8081:8080 piyush6042/web_app:${BUILD_NUMBER} --mount type=bind,source="/var/www/html"/target,target=/app" 
             }
         }
 
