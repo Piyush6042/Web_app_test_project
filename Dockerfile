@@ -1,4 +1,4 @@
-M centos:latest
+FROM centos:latest
 MAINTAINER itspiyush1991@gmail.com
 RUN yum install -y httpd
 WORKDIR /var/www/html
